@@ -1,0 +1,50 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace CSharp_Shell
+{
+
+    public static class Program 
+    {
+        public static void Main() 
+        {
+          String x;
+          float y;
+          
+          void CadastrarUsuario()
+          {
+              Console.Write("Informe o nome do usuário: ");
+              x= Console.ReadLine();
+          
+              Console.Write("Informe o saldo do usuário: ");
+              y= float.Parse(Console.ReadLine());
+          
+              Console.WriteLine ();
+          }
+          
+          void ConsultarConta()
+          {
+              Console.WriteLine("A conta do usuário " + x + " tem " + y + " de saldo.");
+              Console.WriteLine ();
+          }
+          
+          void ApagarConta()
+          {
+              x= String.Empty;
+              y= 0;
+              
+              Console.WriteLine ();
+          }
+          
+          CadastrarUsuario();
+          ConsultarConta();
+          ApagarConta();
+          ConsultarConta();
+          
+          Console.ReadKey();
+        } 
+    }   
+    
+}
