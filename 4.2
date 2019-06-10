@@ -10,41 +10,47 @@ namespace CSharp_Shell
     {
         public static void Main() 
         {
-          String x;
-          float y;
+          String x, y;
+          bool respost, respost0;
           
-          void CadastrarUsuario()
-          {
-              Console.Write("Informe o nome do usuário: ");
-              x= Console.ReadLine();
-          
-              Console.Write("Informe o saldo do usuário: ");
-              y= float.Parse(Console.ReadLine());
-          
-              Console.WriteLine ();
-          }
-          
-          void ConsultarConta()
-          {
-              Console.WriteLine("A conta do usuário " + x + " tem " + y + " de saldo.");
-              Console.WriteLine ();
-          }
-          
-          void ApagarConta()
-          {
-              x= String.Empty;
-              y= 0;
-              
-              Console.WriteLine ();
-          }
-          
-          CadastrarUsuario();
-          ConsultarConta();
-          ApagarConta();
-          ConsultarConta();
-          
-          Console.ReadKey();
-        } 
-    }   
-    
+           Console.Write ("Insira a primeira afirmativa: ");
+           x= Console.ReadLine ();
+           
+           Console.Write ("Insira a segunda afirmativa: ");
+           y= Console.ReadLine ();
+           
+           Console.WriteLine();
+           
+           Console.WriteLine ("A frase '" + x + "' é verdadeira?");
+           Console.Write ("Responda com 'true' ou 'false': ");
+           respost= bool.Parse (Console.ReadLine());
+           
+           Console.WriteLine ();
+           
+           Console.WriteLine ("A afirmaçao: '" + y + "' é verdadeira?");
+           Console.Write ("Reponda com 'true' ou 'false': ");
+           respost0= bool.Parse (Console.ReadLine());
+           
+           Console.WriteLine ();
+           
+           if (respost== true && respost0== true){
+           Console.WriteLine("O resultado lógico da frase: " + x + " e " + y + " é: true");
+           }
+           
+           else {
+           Console.WriteLine("O resultado lógico da frase: " + x + " e " + y + " é: false");
+           }
+           
+           if (respost== true || respost0== true){
+           Console.WriteLine("O resultado lógico da frase: " + x + " ou " + y + " é: true");
+           }
+           
+           else {
+           Console.WriteLine("O resultado lógico da frase: " + x + " ou " + y + " é: false");
+           }
+           
+           
+           
+        }
+    }
 }
